@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easing Functions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            Easing fun
+        </div>
+        <button onclick="about()">
+            About
+        </button>
+    </header>
+    <main>
+        <div>
+            <easing-value>Value</easing-value>
+            <easing-time>Time</easing-time>
+            <canvas width="310" height="310"></canvas>
+        </div>
+        <input id="range" type="range" min="0" max="100" value="0">
+        <label for="time">Animation length:</label>
+        <input id="time" type="number" value="3">
+        <button onclick="playAnimation()">
+            PLAY
+        </button>
+    </main>
+    <nav>
+        <div>
+            <easing-function onclick="addFun(event)">
+                linear
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInQuad
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInCubic
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInQuart
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInQuint
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeOutQuad
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeOutCubic
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeOutQuart
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeOutQuint
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInOutQuad
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInOutCubic
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInOutQuart
+            </easing-function>
+        </div>
+        <div>
+            <easing-function onclick="addFun(event)">
+                easeInOutQuint
+            </easing-function>
+        </div>
+    </nav>
+    <aside>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quo a saepe harum voluptatum beatae
+        perspiciatis, ipsum eveniet vitae repudiandae placeat dicta ea nulla rerum quisquam rem animi sint corrupti.
+    </aside>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
