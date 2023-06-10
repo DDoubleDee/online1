@@ -34,6 +34,7 @@ document.querySelectorAll("nav easing-function").forEach(element => {
     }
 })
 
+//Update locations in case the app is resized
 function resize() {
     is_portrait = window.innerWidth < window.innerHeight
     console.log(is_portrait)
@@ -51,6 +52,7 @@ function resize() {
     }
 }
 resize()
+//Animate the about section
 function about() {
     if (active) { return }
     active = true
@@ -88,6 +90,7 @@ function about() {
         }
     }
 }
+//Add a function to the function list
 function addFun(ev) {
     if (funs.includes(ev.target.innerText)) {
         funs.splice(funs.indexOf(ev.target.innerText), 1)
@@ -99,6 +102,7 @@ function addFun(ev) {
     window.localStorage.setItem("funs", JSON.stringify(funs))
     drawCanvas()
 }
+//Reset canvas and draw all the lines, as well as add the circles with values in them
 function drawCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.beginPath()
@@ -149,11 +153,13 @@ function drawCanvas() {
     }
 }
 drawCanvas()
+//Clear all existing circles
 function clearCircles() {
     document.querySelectorAll("easing-circle").forEach(element => {
         element.remove()
     })
 }
+//Add a single circle corresponding to function name
 function addCircle(name) {
     let div = document.createElement("easing-circle")
     div.style.border = `solid ${color_for(name)} 2px`
@@ -163,6 +169,7 @@ function addCircle(name) {
     div.innerText = Math.round(equation((range.value / 100), name) * 100)
     circle_container.append(div)
 }
+//Calculate the updated position of all circles
 function calculateCircles() {
     document.querySelectorAll("easing-circle").forEach(element => {
         let name = element.getAttribute("name")
@@ -171,6 +178,7 @@ function calculateCircles() {
         element.innerText = Math.round(equation((range.value / 100), name) * 100)
     })
 }
+//Animate value of range going to 100
 function playAnimation() {
     if(range.value == "100"){
         range.value = "0"
@@ -186,6 +194,7 @@ function playAnimation() {
     }, step: calculateCircles})
 }
 range.oninput = calculateCircles
+//Calculate value of a function with "name" and time "t"
 function equation(t, name) {
     switch (name) {
         case "linear":
@@ -216,6 +225,7 @@ function equation(t, name) {
             return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t
     }
 }
+//Get color for function name
 function color_for(name) {
     switch (name) {
         case "linear":
