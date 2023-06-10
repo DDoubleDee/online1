@@ -32,70 +32,83 @@
         </button>
     </main>
     <nav>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 linear
             </easing-function>
+            <span class="tooltiptext">t</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInQuad
             </easing-function>
+            <span class="tooltiptext">t^2</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInCubic
             </easing-function>
+            <span class="tooltiptext">t^3</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInQuart
             </easing-function>
+            <span class="tooltiptext">t^4</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInQuint
             </easing-function>
+            <span class="tooltiptext">t^5</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeOutQuad
             </easing-function>
+            <span class="tooltiptext">"t*(2-t)</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeOutCubic
             </easing-function>
+            <span class="tooltiptext">(--t)t^2+1</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeOutQuart
             </easing-function>
+            <span class="tooltiptext">1-(--t)t^3</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeOutQuint
             </easing-function>
+            <span class="tooltiptext">1+(--t)t^4</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInOutQuad
             </easing-function>
+            <span class="tooltiptext">t<.5 ? 2t^2 : -1+(4-2t)t</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInOutCubic
             </easing-function>
+            <span class="tooltiptext">t<.5 ? 4t^3 : (t-1)(2t-2)(2t-2)+1</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInOutQuart
             </easing-function>
+            <span class="tooltiptext">t<.5 ? 8t^4 : 1-8*(--t)t^3</span>
         </div>
-        <div>
+        <div class="tooltip">
             <easing-function onclick="addFun(event)">
                 easeInOutQuint
             </easing-function>
+            <span class="tooltiptext">t<.5 ? 16t^5 : 1+16*(--t)t^4</span>
         </div>
     </nav>
     <aside>

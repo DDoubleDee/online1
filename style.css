@@ -5,11 +5,14 @@
     --background-color: rgb(231, 231, 231);
     --accent-color: rgb(245, 143, 27);
 }
+
 body {
     margin: 0;
     position: relative;
 }
-html, body {
+
+html,
+body {
     background-color: var(--background-color);
     color: var(--font-color);
     width: 100vw;
@@ -17,6 +20,7 @@ html, body {
     font-family: monospace;
     overflow: hidden;
 }
+
 header {
     width: 100vw;
     height: 10vh;
@@ -26,10 +30,12 @@ header {
     background-color: var(--accent-color);
     color: var(--accent-font-color);
 }
+
 header div {
     margin-left: 1rem;
     font-size: 1.4rem;
 }
+
 header button {
     display: flex;
     align-items: center;
@@ -44,12 +50,15 @@ header button {
     transition: box-shadow 0.3s ease-out;
     box-shadow: inset black 0px 0px 0px;
 }
+
 header button:hover {
     box-shadow: inset black 0px 0px 5px;
 }
+
 header button:focus {
     box-shadow: inset black 0px 0px 5px;
 }
+
 main {
     display: flex;
     justify-content: center;
@@ -60,6 +69,7 @@ main {
     z-index: 1;
     outline: solid var(--accent-color) 2px;
 }
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -68,6 +78,7 @@ nav {
     top: 10vh;
     z-index: 1;
 }
+
 aside {
     display: flex;
     align-items: center;
@@ -78,53 +89,89 @@ aside {
     z-index: 2;
     outline: solid var(--accent-color) 2px;
 }
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    opacity: 0;
+    font-size: 0.6rem;
+    background-color: var(--accent-color);
+    color: var(--accent-font-color);
+    text-align: center;
+    padding: 5px 5px;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    z-index: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}
+
 nav div {
     width: 45%;
     padding-left: 5%;
 }
-easing-function  {
+
+easing-function {
     padding: 0 5%;
     cursor: pointer;
 }
-easing-function:hover  {
+
+easing-function:hover {
     outline: solid var(--font-color) 1px;
 }
+
 canvas {
     width: 310px;
     height: 310px;
 }
+
 main div {
     position: relative;
     margin-top: 5%;
     width: 310px;
     height: 310px;
 }
+
 main div easing-value {
     font-size: 0.6rem;
     position: absolute;
     top: -3px;
     left: -1.5rem;
 }
+
 main div easing-time {
     font-size: 0.6rem;
     position: absolute;
     bottom: -3px;
     right: -1.5rem;
 }
+
 main label {
     font-size: 0.7rem;
 }
+
 #range {
     margin-top: 10px;
     margin-left: 7px;
     width: 300px;
 }
+
 #time {
     width: 2rem;
     font-size: 0.7rem;
     border: 0;
     outline: solid var(--accent-color) 2px;
 }
+
 main button {
     font-family: inherit;
     background-color: inherit;
@@ -136,10 +183,12 @@ main button {
     transition: all 0.3s;
     outline: solid var(--accent-color) 2px;
 }
+
 main button:hover {
     color: var(--accent-font-color);
     background-color: var(--accent-color);
 }
+
 easing-circle {
     display: flex;
     justify-content: center;
@@ -151,23 +200,27 @@ easing-circle {
     font-size: 0.6rem;
     background-color: var(--background-color);
 }
+
 @media screen and (orientation:landscape) {
     main {
         left: 50vw;
         width: 50vw;
         height: 90vh;
     }
+
     nav {
         width: 50vw;
         height: 90vh;
     }
 }
+
 @media screen and (orientation:portrait) {
     main {
         left: 0vw;
         width: 100vw;
         height: 50vh;
     }
+
     nav {
         top: 60vh;
         width: 100vw;
