@@ -31,11 +31,13 @@ header {
     color: var(--accent-font-color);
 }
 
+/* Logo */
 header div {
     margin-left: 1rem;
     font-size: 1.4rem;
 }
 
+/* About button */
 header button {
     display: flex;
     align-items: center;
@@ -59,6 +61,7 @@ header button:focus {
     box-shadow: inset black 0px 0px 5px;
 }
 
+/* Chart container */
 main {
     display: flex;
     justify-content: center;
@@ -70,6 +73,7 @@ main {
     outline: solid var(--accent-color) 2px;
 }
 
+/* Easing functions container */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +83,7 @@ nav {
     z-index: 1;
 }
 
+/* About section */
 aside {
     display: flex;
     align-items: center;
@@ -88,11 +93,6 @@ aside {
     background-color: var(--background-color);
     z-index: 2;
     outline: solid var(--accent-color) 2px;
-}
-
-/* Tooltip container */
-.tooltip {
-    position: relative;
 }
 
 /* Tooltip text */
@@ -116,6 +116,7 @@ aside {
 }
 
 nav div {
+    position: relative;
     width: 45%;
     padding-left: 5%;
 }
@@ -134,6 +135,7 @@ canvas {
     height: 310px;
 }
 
+/* Canvas container */
 main div {
     position: relative;
     margin-top: 5%;
@@ -155,16 +157,19 @@ main div easing-time {
     right: -1.5rem;
 }
 
+/* Label for animation time */
 main label {
     font-size: 0.7rem;
 }
 
+/* Range input */
 #range {
     margin-top: 10px;
     margin-left: 7px;
     width: 300px;
 }
 
+/* Time number input */
 #time {
     width: 2rem;
     font-size: 0.7rem;
@@ -172,6 +177,7 @@ main label {
     outline: solid var(--accent-color) 2px;
 }
 
+/* PLAY button */
 main button {
     font-family: inherit;
     background-color: inherit;
